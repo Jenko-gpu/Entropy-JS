@@ -1,5 +1,4 @@
 
-const { format } = require('path');
 
 var filename = process.argv[2];
 
