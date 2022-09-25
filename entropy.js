@@ -26,9 +26,11 @@ fs.readFile(filename, (err,data) => {
         if (i>=2) {
             for ( j in Letters) {
                 Letters[j]/=i;
-                Entropy -= Letters[j] * (Math.log(Letters[j]) / Math.log(n));
+                Entropy -= Letters[j] * Math.log(Letters[j]);
             }
+            Entropy =/ Math.log(n);
         }
+        
         console.log(`Entropy is ${Entropy}`);
     }
     
